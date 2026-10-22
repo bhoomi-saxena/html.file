@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      #htmlform{
+        border : 2px solid black;
+        width: 50%;
+        padding: 10px;
+      }
+    </style>
+
+    <title>Form</title>
+</head>
+<body> 
+    <h1 style="font-family: Arial, Helvetica, sans-serif; font-weight: 500;">Sample Form</h1> 
+    <form id="htmlform">
+      <label for="firstName">First Name : </label>
+    <input id="firstName" type="text" placeholder="eg: John" required /> <br /> <br />
+
+    <label for="lasttName">Last Name : </label>
+  <input id="lastName" type="text" placeholder="eg: wick" required /> <br /> <br />
+
+  <label for="userEmail">Email : </label>
+  <input id="userEmail" type="email" placeholder="eg: abc@gmailcom" required /> <br /> <br />
+
+  <label for="userPass">Enter your Password :</label>
+  <input id="userPass" type="password" name="userpassword" required /> <br /> <br />
+
+  <label for="userContact">Contact number : </label>
+  <input id="userContact" type="tel" name="contactnumber"  placeholder="eg: 1234567890" /> <br /> <br />
+
+  <label for="dob">Date Of Birth : </label>
+  <input id="dob" type="date" /> <br /> <br />
+  
+  <label>Gender:</label> <br/> 
+  <label for="femaleGender">Female</label>
+  <input id="femaleGender" type="radio" name="Gender" value="Female" /> <br /> 
+
+  <label for="maleGender">Male</label>
+  <input id="maleGender" type="radio" name="Gender" value="Male" /> <br /> 
+
+  <label for="otherGender">Other</label>
+  <input id="otherGender" type="radio" name="Gender" value="Other" /> <br /> <br/>
+
+  <label for="address">Address:</label>
+  <br />
+  <textarea id="address" 
+  name="useraddress" 
+  rows="5"  cols="40" 
+  placeholder="Write your address here..."></textarea> <br /> <br />
+
+  <label>Select your Skills:</label> <br/> 
+  <label for="html">HTML</label>
+  <input id="html" type="checkbox" name="userSkills" value="html" /> <br /> 
+  <label for="css">CSS</label>
+  <input id="css" type="checkbox" name="userSkills" value="css" /> <br /> 
+  <label for="js">JavaScript</label>
+  <input id="js" type="checkbox" name="userSkills" value="javascript" /> <br /> 
+  <label for="python">Python</label>
+  <input id="python" type="checkbox" name="userSkills" value="python" /> <br /> <br />
+
+  <label for="prefRole">Preferred Job Role:</label>
+<select id="prefRole" name="jobRole">
+    <option value="" disabled selected>--Select Job Role--</option>
+    <option value="developer">Web Developer</option>
+    <option value="hr">HR Executive</option>
+    <option value="marketing">Marketing Executive</option>
+    <option value="designer">Graphic Designer</option>
+    <option value="data">Data Analyst</option>
+</select>
+<br><br>
+
+<label>Preferred Work Type:</label> <br/> 
+<label for="fulltime">Full-time</label>
+<input id="fulltime" type="radio" name="workType" value="fulltime"> <br/>
+<label for="parttime">Part-time</label>
+<input id="parttime" type="radio" name="workType" value="parttime"> <br/>
+<label for="remote">Remote</label>
+<input type="radio" id="remote" name="workType" value="remote">
+<br><br>
+
+  <label for="prefLocation">Select your preffered location to work :</label>
+  <select id="prefLocation" name="userlocation" >
+  <option value="" disabled selected>--Select preffered City--</option>
+  <option value="delhi">Delhi</option>
+  <option value="noida">Noida</option>
+  <option value="pune">Pune</option>
+  <option value="dehradun">Dehradun</option>
+  <option value="rudrapur">Rudrapur</option>
+  <option value="ramnagar">Ramnagar</option>
+  <option value="bengaluru">Bengaluru</option>
+  </select> <br /> <br />
+  
+  <label for="feedback">Write your feedback:</label>
+  <br />
+  <textarea id="feedback" 
+  name="userfeedback" 
+  rows="5"  cols="40" 
+  placeholder="Write your feedback here..."></textarea> <br /> <br />
+
+  <button type="submit">Submit</button> 
+  <button type="reset">Reset</button> <br /> <br />
+  </form>
+</body>
+</html>
