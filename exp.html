@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rapid Fire</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0077b6;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* SLIDES */
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .slide.active {
+            display: flex;
+            animation: slideIn 0.7s ease;
+        }
+
+        .content {
+            max-width: 1000px;
+        }
+
+        /* OPENING */
+
+        .opening h1 {
+            font-size: 80px;
+            margin-bottom: 30px;
+        }
+
+        .opening p {
+            font-size: 25px;
+        }
+
+        /* HEADINGS */
+
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 35px;
+            line-height: 1.4;
+        }
+
+        /* BUTTONS */
+
+        button {
+            background-color: white;
+            color: #0077b6;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+        }
+
+        /* OPTIONS */
+
+        .options {
+            margin-top: 30px;
+        }
+
+        /* MOVING NO BUTTONS */
+
+        #noButton,
+        #noButton2 {
+            position: relative;
+        }
+
+        /* TERMS */
+
+        .terms {
+            text-align: left;
+            font-size: 23px;
+            line-height: 1.8;
+            margin-top: 25px;
+        }
+
+        /* SLIDE ANIMATION */
+
+        @keyframes slideIn {
+
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+
+        /* FINAL SLIDE */
+
+        .final h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .final p {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        /* CONFETTI */
+
+        .confetti {
+            position: fixed;
+            top: -30px;
+            font-size: 35px;
+            animation: fall 4s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- SLIDE 1 -->
+
+    <section class="slide active" id="slide1">
+
+        <div class="content opening">
+
+            <h1>Rapid Fire</h1>
+
+            <p>Let's get started...</p>
+
+            <button onclick="nextSlide(2)">
+                Start
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SLIDE 2 -->
+
+    <section class="slide" id="slide2">
+
+        <div class="content">
+
+            <h2>
+                Do you want me to be an employee of your company?
+            </h2>
+
+            <div class="options">
+
+                <button onclick="nextSlide(3)">
+                    1. Yes
+                </button>
+
+                <button onclick="nextSlide(3)">
+                    2. Of course
+                </button>
+
+                <button onclick="nextSlide(3)">
+                    3. We please to be
+                </button>
+
+                <button onclick="nextSlide(3)">
+                    4. OH MY GOD, Really??!!
+                </button>
+
+                <button id="noButton">
+                    5. No
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SLIDE 3 -->
+
+    <section class="slide" id="slide3">
+
+        <div class="content">
+
+            <h1>
+                Alright you want me to be your employee,
+                it's okay twin. I'll be. Don't cry :)
+            </h1>
+
+            <button onclick="nextSlide(4)">
+                Continue
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SLIDE 4 -->
+
+    <section class="slide" id="slide4">
+
+        <div class="content">
+
+            <h2>
+                You have to accept my terms and conditions.
+            </h2>
+
+            <div class="options">
+
+                <button onclick="nextSlide(5)">
+                    1. Yes
+                </button>
+
+                <button onclick="nextSlide(5)">
+                    2. Of course
+                </button>
+
+                <button onclick="nextSlide(5)">
+                    3. We please to be
+                </button>
+
+                <button onclick="nextSlide(5)">
+                    4. Okayyy We are ready
+                </button>
+
+                <button id="noButton2">
+                    5. No
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SLIDE 5 -->
+
+    <section class="slide" id="slide5">
+
+        <div class="content">
+
+            <h1>
+                My Terms & Conditions
+            </h1>
+
+            <div class="terms">
+
+                <ol>
+                    <li>You have to give me food.</li>
+                    <li>Time to sleep.</li>
+                    <li>No work load.</li>
+                    <li>No Jabardasti kaam.</li>
+                    <li>20 days holiday in a month.</li>
+                    <li>Full salary without any reduction.</li>
+                </ol>
+
+            </div>
+
+            <button onclick="nextSlide(6)">
+                I Accept
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL SLIDE -->
+
+    <section class="slide final" id="slide6">
+
+        <div class="content">
+
+            <h1>
+                🎉 Congratulations! 🎉
+            </h1>
+
+            <p>
+                I'm your employeee now!!!
+            </p>
+
+            <h1>
+                Hurray!!! 🥳🎊
+            </h1>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+        /* CHANGE SLIDE */
+
+        function nextSlide(number) {
+
+            document.querySelectorAll(".slide").forEach(function(slide) {
+                slide.classList.remove("active");
+            });
+
+            document.getElementById("slide" + number)
+                .classList.add("active");
+
+            /* Start confetti on final slide */
+
+            if (number === 6) {
+                createConfetti();
+            }
+        }
+
+
+        /* MOVE NO BUTTON */
+
+        function moveButton(button) {
+
+            let maxX = window.innerWidth - button.offsetWidth - 30;
+            let maxY = window.innerHeight - button.offsetHeight - 30;
+
+            let randomX = Math.random() * maxX;
+            let randomY = Math.random() * maxY;
+
+            button.style.position = "fixed";
+            button.style.left = randomX + "px";
+            button.style.top = randomY + "px";
+        }
+
+
+        /* FIRST NO BUTTON */
+
+        const noButton = document.getElementById("noButton");
+
+        noButton.addEventListener("mouseenter", function() {
+            moveButton(noButton);
+        });
+
+
+        /* SECOND NO BUTTON */
+
+        const noButton2 = document.getElementById("noButton2");
+
+        noButton2.addEventListener("mouseenter", function() {
+            moveButton(noButton2);
+        });
+
+
+        /* ALSO WORKS ON TOUCH DEVICES */
+
+        noButton.addEventListener("touchstart", function(event) {
+            event.preventDefault();
+            moveButton(noButton);
+        });
+
+        noButton2.addEventListener("touchstart", function(event) {
+            event.preventDefault();
+            moveButton(noButton2);
+        });
+
+
+        /* CONFETTI / PARTY POPPERS */
+
+        function createConfetti() {
+
+            const emojis = [
+                "🎉",
+                "🎊",
+                "🥳",
+                "✨",
+                "🎈",
+                "💙"
+            ];
+
+            for (let i = 0; i < 40; i++) {
+
+                let confetti = document.createElement("div");
+
+                confetti.className = "confetti";
+
+                confetti.innerHTML =
+                    emojis[Math.floor(Math.random() * emojis.length)];
+
+                confetti.style.left =
+                    Math.random() * 100 + "vw";
+
+                confetti.style.animationDelay =
+                    Math.random() * 3 + "s";
+
+                confetti.style.fontSize =
+                    (20 + Math.random() * 25) + "px";
+
+                document.body.appendChild(confetti);
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

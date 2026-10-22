@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      #htmlform{
+        border : 2px solid black
+      }
+    </style>
+    <title>Form</title>
+</head>
+<body> 
+    <h1>Form_Sample</h1> 
+    <form id="htmlform">
+      <label for="firstName">First Name : </label>
+  <input id="firstName" type="text" placeholder="eg: John" required /> <br /> <br />
+
+  <label for="userEmail">Email : </label>
+  <input id="userEmail" type="email" placeholder="eg: abc@gmailcom" /> <br /> <br />
+
+  <label for="userPass">Enter your Password :</label>
+  <input id="userPass" type="password" name="userpassword" /> <br /> <br />
+
+  <label for="userContact">Contact number : </label>
+  <input id="userContact" type="tel" name="contactnumber"  placeholder="eg: 1234567890" /> <br /> <br />
+
+  <label for="dob">Date Of Birth : </label>
+  <input id="dob" type="date" /> <br /> <br />
+  
+  <p>Gender : </p>
+  <label for="femaleGender">Female</label>
+  <input id="femaleGender" type="radio" name="Gender" value="Female" /> <br /> <br />
+
+  <label for="maleGender">Male</label>
+  <input id="maleGender" type="radio" name="Gender" value="Male" /> <br /> <br />
+
+  <label for="otherGender">Other</label>
+  <input id="otherGender" type="radio" name="Gender" value="Other" /> <br /> <br />
+
+  <p>Select your Skills :</p>
+  <label for="html">HTML</label>
+  <input id="html" type="checkbox" name="userSkills" value="html" /> <br /> 
+  <label for="css">CSS</label>
+  <input id="css" type="checkbox" name="userSkills" value="css" /> <br /> 
+  <label for="js">JavaScript</label>
+  <input id="js" type="checkbox" name="userSkills" value="javascript" /> <br /> 
+  <label for="python">Python</label>
+  <input id="python" type="checkbox" name="userSkills" value="python" /> <br /> <br />
+
+  <label for="prefLocation">Select your preffered location to work :</label>
+  
+  <select id="prefLocation" name="userlocation">
+  <option value="" disabled selected>--Select preffered Country--</option>
+  <option value="japan">Japan</option>
+  <option value="Italy">Italy</option>
+  <option value="usa">USA</option>
+  <option value="switzerland">Switzerland</option>
+  <option value="germany">Germany</option>
+  <option value="egypt">Egypt</option>
+  <option value="Brazil">Brazil</option>
+  <option value="Morocco">Morocco</option>
+  </select> <br /> <br />
+
+  <label for="feedback">Write your feedback:</label>
+  <br /> 
+  <textarea id="feedback" 
+  name="userfeedback" 
+  rows="5"  cols="40" 
+  placeholder="Write your feedback here..."></textarea> <br /> <br />
+
+  <button type="submit">Submit</button> <br /> <br />
+  </form>
+</body>
+</html>
